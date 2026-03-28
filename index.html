@@ -11,9 +11,6 @@ Sabah
 
 Brief Description of Goal of Code:
 This app demonstrates how to use an HTML5 canvas. Users can draw shapes, display text, load an image, and clear the canvas.
-
-Known Issues:
-Canvas size is optimized for mobile screens.
 -->
 	
    <head> 
@@ -31,28 +28,37 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 </script>
 
-
-
-<style>	
-.body {
-     margin: 0em;
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
+
+/* Canvas styling */
+#myCanvas {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: 300px;
+    margin: 20px auto;
+    border: 3px solid black;
+    background-color: white;
 }
-  .page:target {
-    left: 0vw;
-    z-index: 1;
+
+/* Button container */
+.button-area {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* Buttons */
+.canvas-button {
+    width: 100%;
+    margin-bottom: 10px;
 }
 </style>
-
+	
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>App6---HTML5-Canvas</h1>
