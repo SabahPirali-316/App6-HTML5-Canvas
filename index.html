@@ -65,7 +65,18 @@ body {
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
+	<<p>This app shows how to draw on an HTML5 canvas.</p>
+
+<!-- Canvas -->
+<canvas id="myCanvas" width="360" height="300"></canvas>
+
+<!-- Buttons -->
+<div class="button-area">
+    <button class="w3-button w3-blue canvas-button" onclick="drawRectangle()">Draw Rectangle</button>
+    <button class="w3-button w3-green canvas-button" onclick="writeName()">Write My Name</button>
+    <button class="w3-button w3-purple canvas-button" onclick="loadImageOnCanvas()">Load Image</button>
+    <button class="w3-button w3-red canvas-button" onclick="clearCanvas()">Clear Canvas</button>
+</div>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -74,6 +85,55 @@ body {
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
+<script>
+// Get canvas and drawing tool
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
 
+// Draw rectangle
+function drawRectangle() {
+    ctx.fillStyle = "orange";
+    ctx.fillRect(70, 70, 220, 120);
+
+    ctx.lineWidth = 4;
+    ctx.strokeStyle = "black";
+    ctx.strokeRect(70, 70, 220, 120);
+}
+
+// Write your name
+function writeName() {
+    ctx.font = "32px Arial";
+    ctx.fillStyle = "blue";
+    ctx.fillText("Sabah", 120, 160);
+}
+
+// Load image
+function loadImageOnCanvas() {
+    var img = new Image();
+
+    img.onload = function() {
+        ctx.drawImage(img, 80, 50, 200, 200);
+    };
+
+    img.src =
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(`
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+                <rect width="200" height="200" fill="#dff6ff"/>
+                <circle cx="100" cy="100" r="30" fill="yellow"/>
+                <circle cx="70" cy="70" r="20" fill="pink"/>
+                <circle cx="130" cy="70" r="20" fill="pink"/>
+                <circle cx="130" cy="130" r="20" fill="pink"/>
+                <circle cx="70" cy="130" r="20" fill="pink"/>
+            </svg>
+        `);
+}
+
+// Clear canvas
+function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+</script>
+		
 </body>
 </html>
