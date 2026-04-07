@@ -67,6 +67,7 @@ This app demonstrates how to use an HTML5 canvas. Users can draw shapes, display
 <canvas id="myCanvas" width="360" height="300"></canvas>
 
 <!-- Buttons -->
+<!-- Tested these out W3schools software and then plugged them in because github was taking a while to update on my end and could not work the codespaces in the moment-->
 <div class="button-area">
     <button class="w3-button w3-blue canvas-button" onclick="drawRectangle()">Draw Rectangle</button>
     <button class="w3-button w3-green canvas-button" onclick="writeName()">Write My Name</button>
@@ -90,6 +91,7 @@ var ctx = canvas.getContext("2d");
 function drawRectangle() {
     ctx.fillStyle = "orange";
     ctx.fillRect(70, 70, 220, 120);
+	//centering the position of the rectangle
 
     ctx.lineWidth = 4;
     ctx.strokeStyle = "black";
@@ -101,6 +103,7 @@ function writeName() {
     ctx.font = "32px Arial";
     ctx.fillStyle = "blue";
     ctx.fillText("Sabah", 130, 160);
+	//centering the name on the canvas
 }
 
 // Load image
@@ -112,7 +115,8 @@ function loadImageOnCanvas() {
     };
 
     img.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWZmb2F5ZHVhNTRlM3g2d2k0b2lndGV5dm9kN2Q4YW95aXB2eHJqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZRCTV8Lgq8I4U/giphy.gif";
-	//updating image link, was told the link on the previous assignment did not work and wanted to try to fix it for this one. 
+	//Updated image link in one of the latest commits. learned that the image I used for my code in a previous app assignment did not work and wanted to avoid this to occur again.
+	//Additionally, the previous image upload may not have been exactly what was wanted by the assignment. Updated to reflect rubric more accurately. 
 }
 
 // Clear canvas
