@@ -111,18 +111,8 @@ function loadImageOnCanvas() {
         ctx.drawImage(img, 80, 50, 200, 200);
     };
 
-    img.src =
-        "data:image/svg+xml;utf8," +
-        encodeURIComponent(`
-            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-                <rect width="200" height="200" fill="#dff6ff"/>
-                <circle cx="100" cy="100" r="30" fill="yellow"/>
-                <circle cx="70" cy="70" r="20" fill="pink"/>
-                <circle cx="130" cy="70" r="20" fill="pink"/>
-                <circle cx="130" cy="130" r="20" fill="pink"/>
-                <circle cx="70" cy="130" r="20" fill="pink"/>
-            </svg>
-        `);
+    img.src = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWZmb2F5ZHVhNTRlM3g2d2k0b2lndGV5dm9kN2Q4YW95aXB2eHJqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZRCTV8Lgq8I4U/giphy.gif";
+	//updating image link, was told the link on the previous assignment did not work and wanted to try to fix it for this one. 
 }
 
 // Clear canvas
